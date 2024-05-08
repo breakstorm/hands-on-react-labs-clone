@@ -1,69 +1,77 @@
 // !!TODO: db값을 object로 반환하는 함수 별도 생성 -> build 명령어시 에러 발생, 파일 색제
-// TODO: 스크린샷을 참고하여 레이아웃 생성  
+// !!TODO: 스크린샷을 참고하여 레이아웃 생성
 // TODO: db값이랑 바인딩 
 // TODO: 모바일 화면 대응
 // TODO: 테스트 코드 작성
 
+import {Card} from "@/pages/projects/Card.tsx";
+
 function Projects() {
+    const mock = [
+        {
+            "id": "1",
+            "name": "Johnson - Kutch",
+            "description": "Fully-configurable intermediate framework. Ullam occaecati libero laudantium nihil voluptas omnis qui modi qui.",
+            "imageUrl": "/assets/placeimg_500_300_arch4.jpg",
+            "contractTypeId": 3,
+            "contractSignedOn": "2013-08-04T22:39:41.473Z",
+            "budget": 54637,
+            "isActive": false
+        },
+        {
+            "id": "2",
+            "name": "Dillesik LLCs",
+            "description": "Re-contextualized dynamic moratorium. Aut nulla soluta numquam qui dolor architecto et facere dolores.",
+            "imageUrl": "/assets/placeimg_500_300_arch12.jpg",
+            "contractTypeId": 6,
+            "contractSignedOn": "2016-06-26T18:24:01.706Z",
+            "budget": 29729,
+            "isActive": true
+        },
+        {
+            "id": "3",
+            "name": "Purdy, Keeling and Smithams",
+            "description": "Innovative 6th generation model. Perferendis libero qui iusto et ullam cum sint molestias vel.",
+            "imageUrl": "/assets/placeimg_500_300_arch5.jpg",
+            "contractTypeId": 4,
+            "contractSignedOn": "2013-05-26T01:10:42.344Z",
+            "budget": 45660,
+            "isActive": true
+        },
+        {
+            "id": "4",
+            "name": "Kreiger - Waelchis",
+            "description": "Managed logistical migration. Qui quod praesentium accusamus eos hic non error modi et.",
+            "imageUrl": "/assets/placeimg_500_300_arch12.jpg",
+            "contractTypeId": 2,
+            "contractSignedOn": "2009-12-18T21:46:47.944Z",
+            "budget": 81188,
+            "isActive": true
+        },
+        {
+            "id": "5",
+            "name": "Crona Inc",
+            "description": "Monitored explicit methodology. Rem quos maxime amet autem beatae quisquam excepturi sint velit.",
+            "imageUrl": "/assets/placeimg_500_300_arch5.jpg",
+            "contractTypeId": 1,
+            "contractSignedOn": "2016-11-14T19:19:53.624Z",
+            "budget": 31350,
+            "isActive": true
+        }
+    ]
+    console.log('mock', mock);
+
+    const mockList = mock.map((item, index) => (
+        <Card key={item.id} project={item}></Card>
+    ))
 
     return (
-        <div className="overflow-hidden container" style={{'background': '#ccc'}}>
-            {/*<div className="header relative z-10 mb-20 px-4 py-8 ring-1 ring-zinc-900" style={{'background': '#ff0'}}>*/}
-            <div className="header relative z-10 mb-8 py-8 ring-1 ring-zinc-900" style={{'background': '#fff'}}>
-                <div className="container mx-auto lg:max-w-7xl flex items-center justify-between">
-                    <div className="flex items-center gap-2 sm:gap-4">
-                        <span className="zinc-ring ring-zinc-900 hidden sm:inline icon-home"><img
-                            src="/assets/logo-3.svg" alt="logo3"/></span>
-                        <span className="zinc-ring ring-zinc-900 sm:hidden icon-home"><img src="/assets/logo-4.svg"
-                                                                                           alt="logo4"/></span>
-                        <a href="">
-                            <p className="text-xl">Home</p>
-                        </a>
-                        <a href="">
-                            <p className="text-xl">Projects</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <section className=" px-4">
+        <div className="overflow-hidden" >
+            <section className="p-4">
                 <div className="container mx-auto lg:max-w-7xl">
-                    <div className="content--title">Projects</div>
-                    {/*<ul className="columns-3xs gap-8">*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item aspect-square">1</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-video">2</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-square">3</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-video">4</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-square">5</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-video">6</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-square">7</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-video">8</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-square">9</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item mt-8 aspect-video">10</li>*/}
-                    {/*</ul>*/}
-                    {/* flex를 사용하는 경우 tailwind config 값을 수정하여서 gap-width 값을 작성해야 한다. */}
-                    {/*<ul className="flex flex-wrap -m-2">*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-square">1</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-video">2</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-square">3</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-video">4</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-square">5</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-video">6</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-square">7</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-video">8</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-square">9</li>*/}
-                    {/*    <li style={{'background-color': 'green'}} className="content--item m-2 w-full sm:w-1/3 md:w-1/5 aspect-video">10</li>*/}
-                    {/*</ul>*/}
-                    <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center">
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">1</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">2</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">3</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">4</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">5</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">6</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">7</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">8</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">9</li>
-                        <li style={{'background-color': 'green'}} className="content--item aspect-square">10</li>
+                    <div className="content--title text-4xl mb-4">Projects</div>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center">
+                        {mockList}
                     </ul>
                 </div>
             </section>
