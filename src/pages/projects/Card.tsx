@@ -6,7 +6,7 @@ interface CardProps {
 
 function Card(props: CardProps) {
     const item:Project = props?.project;
-    console.log('Card ::: item', item);
+    // console.log('Card ::: item', item);
     return (
         <li className="content--item ring-1 border-solid border-zinc-500 border rounded aspect-square">
             <div className="list-card--container">
@@ -23,8 +23,8 @@ function Card(props: CardProps) {
                         <button
                             className="rounded border border-zinc-400 drop-shadow-lg px-4 py-2 flex justify-start items-center hover:bg-amber-50 hover:scale-110">
                             <span className="icon">
-                                <svg className="h-8 w-8 text-zinc-500" viewBox="0 0 24 24" stroke-width="2"
-                                     stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path
+                                <svg className="h-8 w-8 text-zinc-500" viewBox="0 0 24 24" strokeWidth="2"
+                                     stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path
                                     stroke="none" d="M0 0h24v24H0z"/>  <path
                                     d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3"/>  <path
                                     d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3"/>  <line x1="16" y1="5" x2="19"
@@ -36,8 +36,8 @@ function Card(props: CardProps) {
                             className="rounded border border-zinc-400 drop-shadow-lg px-4 py-2  flex justify-start items-center hover:bg-amber-50 hover:scale-110">
                             <span className="icon">
                                 <svg className="h-8 w-8 text-zinc-500" width="24" height="24" viewBox="0 0 24 24"
-                                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                                     stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="5"
+                                     strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round"
+                                     strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="5"
                                                                                                               y="3"
                                                                                                               width="14"
                                                                                                               height="18"

@@ -5,6 +5,7 @@ import {Header} from "@/common/Header.tsx";
 function App() {
   return (
     <>
+        <p>learn react</p>
         <Header></Header>
         <Projects></Projects>
     </>
