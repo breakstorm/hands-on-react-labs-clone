@@ -29,8 +29,12 @@
     },
 
     /* jest */
-    "types": ["jest", "vite-plugin-svgr/client"],
-    "esModuleInterop": true,
+
+      "esModuleInterop": true,
+      "types": ["@testing-library/jest-dom"]
+    // 1번 테스트
+    //    "types": ["jest", "vite-plugin-svgr/client"],
+    //    "esModuleInterop": true,
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
