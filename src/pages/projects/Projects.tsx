@@ -8,7 +8,7 @@
 // TODO: 목록 로딩, 목록 에러 상태 추가.
 
 import {Card} from "@/pages/projects/Card.tsx";
-import projects from "/src/api/ProjectAPI.ts";
+import projects from "@/api/ProjectAPI.ts";
 
 function Projects() {
     // const mock = [
@@ -66,16 +66,17 @@ function Projects() {
     const mock = projects();
     console.log('mock', mock);
 
-    const mockList = mock.map((item, index) => (
+    const mockList = mock.map((item) => (
         <Card key={item.id} project={item}></Card>
     ))
 
     return (
-        <div className="overflow-hidden" >
+        <div className="overflow-hidden">
             <section className="p-4">
                 <div className="container mx-auto lg:max-w-7xl">
                     <div className="content--title text-4xl mb-4">Projects</div>
-                    <button className="w-full bg-zinc-100 my-4 p-4 border rounded border-zinc-400 border-solid">More</button>
+                    <button className="w-full bg-zinc-100 my-4 p-4 border rounded border-zinc-400 border-solid">More
+                    </button>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center">
                         {mockList}
                     </ul>

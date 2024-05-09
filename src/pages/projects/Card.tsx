@@ -1,4 +1,4 @@
-import Project from "/src/api/IfProjects.ts"
+import { Project } from "@/api/IfProjects.ts"
 
 interface CardProps {
     project: Project;

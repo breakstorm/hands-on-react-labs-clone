@@ -1,11 +1,12 @@
 export class Project {
-    id: number | undefined;
+    id: number | string | undefined;
     name: string = "";
     description: string = "";
     contractTypeId: number | undefined;
-    contractSignedOn: Date = new Date();
+    contractSignedOn: Date | string;
     budget: number = 0;
     isActive: boolean = false;
+    imageUrl: string;
 
 
     constructor(initializer?: any) {
@@ -20,5 +21,6 @@ export class Project {
             this.contractSignedOn = new Date(initializer.contractSignedOn);
         if (initializer.budget) this.budget = initializer.budget;
         if (initializer.isActive) this.isActive = initializer.isActive;
+        if (initializer.imageUrl) this.imageUrl = initializer.imageUrl;
     }
 }
